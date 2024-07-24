@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Post</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #f6f6f6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #b92b27; /* Quora red color */
+        }
+        .post {
+            border-bottom: 1px solid #e2e2e2;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+        .user {
+            font-size: 18px;
+            font-weight: bold;
+            color: #b92b27; /* Quora red color */
+            margin: 0 0 5px;
+        }
+        .content {
+            font-size: 16px;
+            color: #333;
+            margin: 0;
+        }
+        p {
+            font-size: 14px;
+            color: #555;
+            margin: 0 0 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Show Post in Detail</h2>
+        <p>post.id = <%= post.id %></p>
+        <div class="post">
+            <h3 class="user">@<%= post.username %></h3>
+            <h4 class="content"><%= post.content %></h4>
+        </div>
+    </div>
+</body>
+</html>

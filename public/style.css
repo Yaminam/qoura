@@ -1,0 +1,85 @@
+/* Global Styles */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #f6f6f6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    text-align: center;
+}
+
+/* Header Styles */
+h1 {
+    font-size: 36px;
+    margin: 20px 0;
+    color: #b92b27; /* Quora red color */
+}
+
+/* Post Container */
+.post {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    text-align: left;
+}
+
+/* Post User */
+.user {
+    font-size: 18px;
+    font-weight: bold;
+    color: #b92b27; /* Quora red color */
+    margin: 0 0 10px;
+}
+
+/* Post Content */
+.content {
+    font-size: 16px;
+    color: #333;
+    margin: 0 0 10px;
+}
+
+/* Links */
+a {
+    color: #b92b27; /* Quora red color */
+    text-decoration: none;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Button Styles */
+button {
+    background-color: #b92b27; /* Quora red color */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #a32c20; /* Darker red on hover */
+}
+
+/* Create New Post Link */
+a[href="/post/new"] {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #b92b27; /* Quora red color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+a[href="/post/new"]:hover {
+    background-color: #a32c20; /* Darker red on hover */
+}

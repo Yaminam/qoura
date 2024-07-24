@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Posts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Quora Posts</h1>
+    <% for (let post of posts) { %>
+        <div class="post">
+            <h3 class="user">@ <%= post.username %></h3>
+            <h4 class="content"><%= post.content %></h4>
+            <!-- Corrected URL to include the post.id dynamically -->
+            <a href="/post/<%= post.id %>">View Post in Detail</a>
+            <a href="/post/<%= post.id %>/edit">edit</a>
+           <form  method = "post" action="/post/<%=post.id%>?_method=DELETE">
+            <button>delete this post</button>
+           </form>
+
+        </div>
+    <% } %>
+    <br><br>
+    <a href="/post/new">Create New Post</a>
+</body>
+</html>

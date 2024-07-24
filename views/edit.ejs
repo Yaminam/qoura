@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post</title>
+</head>
+<body style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #f6f6f6; margin: 0; padding: 0; color: #333; text-align: center;">
+    <div style="max-width: 800px; margin: 20px auto; background-color: #ffffff; padding: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.1); border-radius: 5px;">
+        <h2 style="font-size: 24px; margin-bottom: 20px; color: #b92b27;">Edit Your Post</h2>
+        <p style="font-size: 14px; color: #555; margin: 0 0 15px;">Post ID: <%= post.id %></p>
+        <p style="font-size: 14px; color: #555; margin: 0 0 15px;">Post Username: <%= post.username %></p>
+        <form method="post" action="/post/<%= post.id %>?_method=PATCH" style="display: flex; flex-direction: column; align-items: center;">
+            <textarea rows="10" cols="35" name="content" style="font-size: 16px; padding: 10px; border: 1px solid #ddd; border-radius: 4px; resize: vertical;">
+                <%= post.content %>
+            </textarea>
+            <br><br>
+            <button type="submit" style="background-color: #b92b27; color: #fff; border: none; padding: 10px 20px; font-size: 16px; border-radius: 4px; cursor: pointer;">
+                Submit Your Changes
+            </button>
+        </form>
+    </div>
+</body>
+</html>
